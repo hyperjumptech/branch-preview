@@ -1,0 +1,21 @@
+name: Branch Preview
+description: Preview your latest changes on the branch on a sub domain
+branding:
+  icon: 'upload-cloud'
+  color: 'red'
+inputs:
+  host:
+    description: This is your dokku host address to push the branch to
+    required: true
+  dokku_key:
+    description: this is the ssh/dokku private key that allows pushing to the dokku
+    required: true
+  domain:
+    description: This is the domain to map to.
+    required: true
+
+runs:
+  using: 'composite'
+  steps:
+    - run: $GITHUB_ACTION_PATH/entrypoint.sh
+      shell: bash
