@@ -13,9 +13,17 @@ inputs:
   domain:
     description: This is the domain to map to.
     required: true
+  github_token:
+    description: 'Github access token'
+    required: true
 
 runs:
   using: 'composite'
   steps:
     - run: $GITHUB_ACTION_PATH/entrypoint.sh
       shell: bash
+      env:
+        DOKKU_KEY: ${{ inputs.dokku_key }}
+        HOST: ${{ inputs.host }}
+        DOMAIN: ${{ inputs.domain }}
+        GITHUB_TOKEN: ${{ inputs.github_token }}
