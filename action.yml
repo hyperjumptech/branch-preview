@@ -1,5 +1,5 @@
-name: Branch Preview
-description: Preview your latest changes on the branch on a sub domain
+name: Branch-Preview Action
+description: Preview your latest branch changes on a sub domain
 branding:
   icon: 'upload-cloud'
   color: 'red'
