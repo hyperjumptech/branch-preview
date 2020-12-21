@@ -1,0 +1,11 @@
+name: "Code Quality"
+on: [push, workflow_dispatch]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: lint shell script
+        run: shellcheck ./*.sh
