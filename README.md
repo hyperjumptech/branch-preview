@@ -31,7 +31,7 @@ jobs:
           github_primary_branch: 'main'
 ```
 
-You can refer to other version, or even the main brance like so:
+You can refer to other versions, or even the main branch like so:
 
 ```yml
   uses: hyperjumptech/branch-preview@main
